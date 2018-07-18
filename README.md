@@ -77,7 +77,7 @@ define your component
       
       // called when element is removed from DOM. analagous to 'disconnectedCallback' of custom element spec
       onRemove: function() {  console.log( 'oh no...' ) } 
-   });  
+     });  
 
 
 condensed  component definition 
