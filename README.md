@@ -3,19 +3,20 @@ a [web component](https://en.wikipedia.org/wiki/Web_Components) factory written 
 
 define [custom html elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) with less boilerplate code. 
 
-<< [read the source code](/lettice.js) >>
-
 its like an uber simple version of polymer, with angular-like component definitions, and no semblance of backwards compatibility with anything.
   
 ## getting started
 copy / paste the code into your favorite es6 javascript web project.
 
+<< [view the source code](/lettice.js) >>
+
 or try it in codepen and experiment yourself in the browser. 
 https://codepen.io/diopside/pen/mjrXEv
 
-its just ~ 100 lines of javascript, no frameworks / dependencies required. just a browser that supports es6 javascript and web components (read: chrome / safari / opera ).
+no frameworks / dependencies required. just a browser that supports es6 javascript and web components (read: chrome / safari / opera ).
 
 you can even just paste it in an html script tag and get going on a local, network-less environment.
+
 it almost feels like 2006 again.
 
 ## what and how
