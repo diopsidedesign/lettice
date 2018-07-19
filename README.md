@@ -29,8 +29,10 @@ component styles are fully encapsulated and will not affect external html elemen
 good on chrome and firefox, firefox tries its damndest, and things are looking good in the redmond camp. 
 
 To enable custom elements and shadow DOM in Firefox, set the
+````
      dom.webcomponents.customelements.enabled   // and 
      dom.webcomponents.shadowdom.enabled preferences  
+````
 to true.
 
 
