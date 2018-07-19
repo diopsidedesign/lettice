@@ -89,9 +89,9 @@ Lettice({
 ````
 
 
-## example component with exaplanations
+## example component with explanations
 
-to build a component, simply include the lettice.js code in a web project. 
+to build a component, simply include the lettice.js code in a web project. i.e 
 
     <script type="text/javascript" src="./pathOrUrl/to/lettice.js"></script>
 
