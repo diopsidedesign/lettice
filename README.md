@@ -1,9 +1,9 @@
 # lettice
-a [web component](https://en.wikipedia.org/wiki/Web_Components) factory written in [es6](http://es6-features.org/).  
+a [web component](https://en.wikipedia.org/wiki/Web_Components) builder written in [es6](http://es6-features.org/).  
 
 define [custom html elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) with less boilerplate code. 
 
-its like an uber simple version of [polymer](https://www.polymer-project.org/) that eschews all notions of backwards compatibility. polyfills? what are those.
+its like an uber simple version of [polymer](https://www.polymer-project.org/) that eschews all notions of backwards compatibility. polyfills? what are those. 
   
 ## getting started
 copy / paste the code into your favorite es6 javascript web project.
@@ -22,7 +22,9 @@ it almost feels like 2006 again.
 ## what and how
 lettice takes an input object that defines the selector, template, styles, and other behavior about your component. it generates a corresponding es6 class extending the HTMLElement interface and automatically calls the window.customElements.define method to define your element.
 
-if you're familiar with frameworks like angular or polymer, the approach and syntax shouldn't be too strange
+if you're familiar with frameworks like angular or polymer, the approach and syntax shouldn't be too strange.
+
+component styles are fully encapsulated and will not affect external html elements thanks to the [shadow DOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM) spec
 
 ## a simple example 
 ````
