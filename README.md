@@ -238,7 +238,7 @@ Lettice({
 
 now you can use your custom element in an html page like so 
 
-     <example-component name=mypage> </example-component>
+     <example-component> </example-component>
      
 
      
