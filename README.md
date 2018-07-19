@@ -3,6 +3,8 @@ a [web component](https://en.wikipedia.org/wiki/Web_Components) factory written 
 
 define [custom html elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) with less boilerplate code. 
 
+<< [read the source code](/lettice.js) >>
+
 its like an uber simple version of polymer, with angular-like component definitions, and no semblance of backwards compatibility with anything.
   
 ## getting started
