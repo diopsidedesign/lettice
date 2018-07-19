@@ -100,7 +100,7 @@ function Lettice( config ) {
             return observedAttrs }  
          
          // return only those child dom nodes which have been specified as component properties
-         get shadowChildren() {
+         get templateChildren() {
             return Object.keys(config.children).map( key => { return this[key] }) } 
          
          // return -all- dom nodes descendant to this component
