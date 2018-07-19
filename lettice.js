@@ -62,19 +62,21 @@ function Lettice( config ) {
             for ( let attrKey in config.attributes ) {
                defineAndInitProp( attrKey, config.attributes[ attrKey ] ) } 
 
-            // adds dom event listeners to host element if defined
+            // bind dom events to host element
             for ( let eventType in config.listeners ) { 
                this.addEventListener( eventType, config.listeners[ eventType ].bind( this )) }
 
             for ( let key in config.children ) {   
                // default behavior is to use query selector unless array of nums is provided
                let query = selector => { return this.shadowRoot.querySelector( selector ) }; 
-               if ( config.children[ key ] instanceof Array ) { 
-                  // finds a dom element via an array of child node indexes - a crude dom map
-                  query = nodeIndexes => {
-                     let child = this.childNodes[ nodeIndexes[0] ];
-                     nodeIndexes.slice(1).forEach( index => { child = this.getChildrenOf( child )[ index ] });  
-                     return child } } 
+               if ( config.children[ key ] instanceof Array ) {  
+                  
+                  // finds a dom element via an array of child node indexes - a crude dom map 
+                  query = nodeIndexes => { 
+                     let child = this.shadowRoot;
+                     nodeIndexes.map( (index) => { child = this.getChildrenOf( child )[ index ] })
+                     return child } }  
+
                Object.defineProperty( this, key, {
                   writable: true,
                   enumerable: true,
@@ -85,14 +87,13 @@ function Lettice( config ) {
          get template() {   // appends additional style information to the template string (including evaluated function styles) if available and returns the joint string
             const buildStyles = (funcArr) => {
                return funcArr.map( func => {
-                  return func.bind(this)() }).join(' '); // call and concatenate output of functions in buildStyles array
-            } 
+                  return func.bind(this)() }).join(' '); }  // call and concatenate output of functions in buildStyles array
+            let insert = '';
             if ( config.styles ) {
-               return '<style>' + config.styles + (config.buildStyles ? buildStyles(config.buildStyles) : '') + '</style>' +  config.template 
-            } else if ( config.styleUrl ){
-               // im kinda surprised its this easy including an external stylesheet
-               return '<link rel=stylesheet href="' + config.styleUrl + '">' + config.template
-            } else return config.template
+               insert+= '<style>' + config.styles + (config.buildStyles ? buildStyles(config.buildStyles) : '') + '</style>';  } 
+            if ( config.styleUrl ){ 
+               insert+= '<link rel=stylesheet href="' + config.styleUrl + '">';  } 
+            return insert + config.template
          }
 
          // returns the constant defined above the class definition, Array<string>
@@ -130,6 +131,6 @@ function Lettice( config ) {
       }
    } 
 
-   // buildElement function returns an es6 class built to shadow dom + custom element spec v1
+   // buildElement returns an es6 class built to shadow dom + custom element spec v1
    customElements.define( config.selector, buildElement( config ))
 } 
