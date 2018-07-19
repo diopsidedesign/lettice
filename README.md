@@ -1,19 +1,22 @@
 # lettice
-a web component factory written in es6.  
+a (https://en.wikipedia.org/wiki/Web_Components)[web component] factory written in (http://es6-features.org/)[es6].  
 
-define custom html elements with less boilerplate code. 
+define (https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)[custom html elements] with less boilerplate code. 
 
-its like an uber simple version of Polymer, with angular-like component definitions, and no semblance of backwards compatibility with anything.
+its like an uber simple version of polymer, with angular-like component definitions, and no semblance of backwards compatibility with anything.
   
 ## getting started
 copy / paste the code into your favorite es6 javascript web project.
-or try it in codepen and experiment yourself.
-its just ~ 100 lines of javascript, no frameworks / dependencies required. just a browser that supports es6 javascript and web components (...chrome).
-you can just paste it in an html script tag and get going.
-almost feels like 2006 again.
+
+or try it in codepen and experiment yourself in the browser. 
+
+its just ~ 100 lines of javascript, no frameworks / dependencies required. just a browser that supports es6 javascript and web components (read: chrome / safari / opera ).
+
+you can even just paste it in an html script tag and get going on a local, network-less environment.
+it almost feels like 2006 again.
 
 ## what and how
-lettice takes an input object that defines the selector, template, styles, and other behavior about your component. it generates a custom es6 class extending the HTMLElement interface and automatically calls the window.customElements.define method to define your element.
+lettice takes an input object that defines the selector, template, styles, and other behavior about your component. it generates a corresponding es6 class extending the HTMLElement interface and automatically calls the window.customElements.define method to define your element.
 
 if you're familiar with frameworks like angular or polymer, the approach and syntax shouldn't be too strange
 
