@@ -62,7 +62,7 @@ function Lettice( config ) {
             for ( let attrKey in config.attributes ) {
                defineAndInitProp( attrKey, config.attributes[ attrKey ] ) } 
 
-            // bind dom events to host element
+            // adds dom event listeners to host element if defined
             for ( let eventType in config.listeners ) { 
                this.addEventListener( eventType, config.listeners[ eventType ].bind( this )) }
 
