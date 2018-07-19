@@ -28,39 +28,50 @@ component styles are fully encapsulated and will not affect external html elemen
 
 ## a simple example 
 ````
+
 Lettice({
+
    selector: 'example-component', 
+   
    template: `
       <section id="pagename" >  
          <h3 class="page-title"></h3>
          <h6 id="subtitle"> subtitles are hard </h6>
          <slot></slot>  
       </section> 
-      <span></span> `, 
+      <span></span>
+   `, 
+   
    styles: ` 
       h3.page-title { 
          font-size: 1rem;  
       }`,  
+      
    buildStyles: [
       function () { return '\n:host-context([activepage=' + this.getAttribute('name') + ']) h3 {   font-size: 5rem    }' } 
    ], 
+   
    attributes: {  
       'name'     : 'untitled component', 
       'active'   : false, 
       'pagename' : { default: 'untitled page', observe: false }  
    }, 
+   
    children: {  
       'pageTitle' : [0,0],  
       'separator' : [1], 
       'subtitle'  : '#subtitle' 
    }, 
+   
    listeners: { 
       'mouseenter' : function() { this.pageTitle.style.color = pink } 
    }, 
+   
    onCreate: function(){  
       this.pageTitle.textContent = this.name; 
       let p = setTimeout(()=> { this.active = true }, 1000) 
    }, 
+   
    onChange: { 
       'active' : function(oldVal, newVal) {
           console.log('i am a function that is called whenever the value of the 'active' attribute changes on the host element')
@@ -69,6 +80,7 @@ Lettice({
           console.log( 'i am a function called whenver ANY observed attribute changes' )
        }
    }, 
+   
    onRemove: function() {
       console.log('oh noooo, please dont leave me')
    } 
