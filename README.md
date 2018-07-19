@@ -17,8 +17,6 @@ no frameworks / dependencies required. just a browser that supports es6 javascri
 
 you can even just paste it in an html script tag and get going on a local, network-less environment.
 
-it almost feels like 2006 again.
-
 ## what and how
 lettice reads an input object that defines the selector, template, styles, and other behavior about your component and generates a corresponding es6 class extending the HTMLElement interface, and then automatically calls the window.customElements.define method to register your element.
 
