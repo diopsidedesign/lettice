@@ -24,6 +24,17 @@ if you're familiar with frameworks like angular or polymer, the approach and syn
 
 component styles are fully encapsulated and will not affect external html elements thanks to the [shadow DOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM) spec
 
+## browser compatibility
+
+good on chrome and firefox, firefox tries its damndest, and things are looking good in the redmond camp. 
+
+To enable custom elements and shadow DOM in Firefox, set the
+     dom.webcomponents.customelements.enabled   // and 
+     dom.webcomponents.shadowdom.enabled preferences  
+to true.
+
+
+
 ## a simple example 
 ````
 
