@@ -3,7 +3,7 @@ a [web component](https://en.wikipedia.org/wiki/Web_Components) factory written 
 
 define [custom html elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) with less boilerplate code. 
 
-its like an uber simple version of polymer, with angular-like component definitions, and no semblance of backwards compatibility with anything.
+its like an uber simple version of [polymer](https://www.polymer-project.org/) that eschews all notions of backwards compatibility. polyfills? what are those.
   
 ## getting started
 copy / paste the code into your favorite es6 javascript web project.
