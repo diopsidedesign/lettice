@@ -1,7 +1,7 @@
 # lettice
-a (https://en.wikipedia.org/wiki/Web_Components)[web component] factory written in (http://es6-features.org/)[es6].  
+a [web component](https://en.wikipedia.org/wiki/Web_Components) factory written in [es6](http://es6-features.org/).  
 
-define (https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)[custom html elements] with less boilerplate code. 
+define [custom html elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) with less boilerplate code. 
 
 its like an uber simple version of polymer, with angular-like component definitions, and no semblance of backwards compatibility with anything.
   
@@ -9,6 +9,7 @@ its like an uber simple version of polymer, with angular-like component definiti
 copy / paste the code into your favorite es6 javascript web project.
 
 or try it in codepen and experiment yourself in the browser. 
+https://codepen.io/diopside/pen/mjrXEv
 
 its just ~ 100 lines of javascript, no frameworks / dependencies required. just a browser that supports es6 javascript and web components (read: chrome / safari / opera ).
 
