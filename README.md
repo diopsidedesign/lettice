@@ -20,7 +20,7 @@ you can even just paste it in an html script tag and get going on a local, netwo
 it almost feels like 2006 again.
 
 ## what and how
-lettice takes an input object that defines the selector, template, styles, and other behavior about your component. it generates a corresponding es6 class extending the HTMLElement interface and automatically calls the window.customElements.define method to define your element.
+lettice reads an input object that defines the selector, template, styles, and other behavior about your component and generates a corresponding es6 class extending the HTMLElement interface, and then automatically calls the window.customElements.define method to register your element.
 
 if you're familiar with frameworks like angular or polymer, the approach and syntax shouldn't be too strange.
 
